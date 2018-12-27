@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import Home from '../home/Home.js'
+import Furniture from '../furniture/Furniture.js'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <div className="app">
         <main>
           <Route exact path="/" component={ Home }/>
+          <Route exact path="/furniture" component={ Furniture }/>
         </main>
       </div>
     );
