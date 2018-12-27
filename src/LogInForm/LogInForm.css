@@ -1,0 +1,14 @@
+.logIn-h3 {
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.logIn-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px black solid;
+    margin-bottom: 25px;
+}
+
