@@ -19,7 +19,7 @@ textarea, select, input, button {
   outline: none;
 }
 
-input[type="text"] {
+input {
   color: black;
   opacity: 1;
   font-size: 18px;

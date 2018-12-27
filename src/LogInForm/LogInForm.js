@@ -15,9 +15,9 @@ class LogInForm extends Component {
               <input className="logIn-input" type='text' name='email' placeholder='email' onChange={this.props.handleInput} />
             </div>
             <div>
-              <input className="logIn-input" type='text' name='password' placeholder="password" onChange={this.props.handleInput} />
+              <input className="logIn-input pw" type='text' name='password' placeholder="password" onChange={this.props.handleInput} />
             </div>
-            <input className="home-button" value='Submit' type='submit' onClick={this.props.handleLogIn} />
+            <input className="home-button" value='Log In' type='submit' onClick={this.props.handleLogIn} />
           </form>
         </div>
         <img className="home-img" src="https://i.imgur.com/nL4okEY.png" alt="Wishbone Chair by Carl Hansen"/>
