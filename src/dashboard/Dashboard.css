@@ -1,0 +1,38 @@
+.dashboard {
+    background-image: linear-gradient(to right, rgb(250, 222, 95), rgb(252, 206, 4));
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    top: 40px;
+    right: 0px;
+    left: 0px;
+    justify-content: space-evenly;
+    margin: 0px 20px 20px 20px;
+}
+
+.dashboard-textbox {
+    width: 400px;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.dashboard-h1 {
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.dashboard-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 700px;
+}
+
+.fa-plus-square {
+    font-size: 60px;
+    margin-left: 25px;
+    color: white;
+}

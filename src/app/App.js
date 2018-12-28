@@ -10,6 +10,7 @@ import NavBar from '../NavBar/NavBar'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
+import Dashboard from '../dashboard/Dashboard.js'
 
 class App extends Component {
   constructor() {
@@ -77,6 +78,7 @@ class App extends Component {
     })
     .then(response => {
       localStorage.token = response.data.token
+      // console.log(response.data.token)
       this.setState({isLoggedIn: true})
     })
     .catch(err => console.log(err))
@@ -116,6 +118,7 @@ class App extends Component {
               )
             }}
           />
+          <Route exact path='/dashboard' component={ Dashboard } />
         </main>
       </div>
     );

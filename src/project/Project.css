@@ -1,0 +1,35 @@
+.project {
+    height: 300px;
+    width: 300px;
+    border: white 2px solid;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-h1 {
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 10px 0px 0px 0px;
+    color: white;
+}
+
+.project-h2 {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    color: white;
+}
+
+.project-img {
+    object-fit: contain;
+    height: 100px;
+    align-self: flex-start;
+    border-radius: 50%;
+    border: 3px white solid;
+    margin-bottom: 20px;
+}
+
