@@ -10,7 +10,6 @@ import NavBar from '../NavBar/NavBar'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
-import Furniture from '../furniture/Furniture.js'
 
 class App extends Component {
   constructor() {
@@ -84,6 +83,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="app">
         <NavBar isLoggedIn={this.state.isLoggedIn}/>
@@ -94,7 +94,7 @@ class App extends Component {
                 <Home isLoggedIn={this.state.isLoggedIn}/>
               )
             }}/>
-          {/* <Route exact path="/furniture" component={ Furniture }/> */}
+   
           <Route exact path='/signup'
               render={(props) => {
                 return (
@@ -121,5 +121,9 @@ class App extends Component {
     );
   }
 }
+
+
+
+
 
 export default App;
