@@ -14,7 +14,11 @@
 .dashboard-textbox {
     width: 400px;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+}
+
+.dashboard-change {
+    display: flex;
 }
 
 .dashboard-h1 {
@@ -35,4 +39,7 @@
     font-size: 60px;
     margin-left: 25px;
     color: white;
+    background: none;
+	border: none;
+	padding: 0;
 }
