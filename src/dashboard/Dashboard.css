@@ -29,9 +29,9 @@
 }
 
 .dashboard-projects {
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; */
+    justify-content: flex-start;
     width: 700px;
 }
 

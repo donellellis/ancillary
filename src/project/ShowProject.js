@@ -38,7 +38,7 @@ class ShowProject extends Component {
           )
       })
     return (
-      <div className="change">
+      <div className="showProject-container">
           {list}
       </div>
     )
