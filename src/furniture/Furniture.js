@@ -12,9 +12,12 @@ class Furniture extends Component {
         axios.get(`http://localhost:4000/api/furniture`)
           .then(res => {
             const furnitureData = res.data;
-            this.setState({ furnitureData });
+            this.setState({ furnitureData })
           })
-      }
+          .catch((err) => {
+              console.log(err)
+          })
+    }
 
     render() {
         let list = this.state.furnitureData.map((furniture, index) => {

@@ -1,4 +1,4 @@
-.project {
+.showProject {
     height: 300px;
     width: 300px;
     border: white 2px solid;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.project-h1 {
+.showProject-h1 {
     font-size: 26px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -16,7 +16,7 @@
     color: white;
 }
 
-.project-h2 {
+.showProject-h2 {
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -24,12 +24,19 @@
     color: white;
 }
 
-.project-img {
+.showProject-img {
     object-fit: contain;
     height: 100px;
     align-self: flex-start;
     border-radius: 50%;
     border: 3px white solid;
     margin-bottom: 20px;
+}
+
+.change {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
 }
 
