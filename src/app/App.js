@@ -6,10 +6,10 @@ import { Route } from 'react-router-dom'
 import axios from 'axios'
 
 import Home from '../home/Home.js'
-import NavBar from '../NavBar/NavBar'
-import SignUpForm from '../SignUpForm/SignUpForm'
-import LogInForm from '../LogInForm/LogInForm'
-import LogOut from '../LogOut/LogOut'
+import NavBar from '../navBar/NavBar'
+import SignUpForm from '../signUpForm/SignUpForm'
+import LogInForm from '../logInForm/LogInForm'
+import LogOut from '../logOut/LogOut'
 import Dashboard from '../dashboard/Dashboard.js'
 
 class App extends Component {

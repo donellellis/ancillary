@@ -14,9 +14,14 @@ class ShowProject extends Component {
     }
 
     componentDidMount() {
-        axios.get(backendBaseUrl + postEndpoint)
+        axios.get(backendBaseUrl + postEndpoint, {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.token
+            }
+        })
           .then((res) => {
             const projectData = res.data;
+            console.log(projectData)
             this.setState({
                 projectData
             })

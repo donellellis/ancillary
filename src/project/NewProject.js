@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import './NewProjectForm.css'
+import './NewProject.css'
 import axios from 'axios';
-// import { Redirect } from 'react-router'
 
 const backendBaseUrl = 'http://localhost:4000'
 const postEndpoint = '/projects';
 
-class NewProjectForm extends Component {
+class NewProject extends Component {
     constructor(props){
         super(props);
         this.state = {
             name: '',
             client: '',
             imageURL: '',
-            id: '',
-            redirect: false
+            id: ''
         }
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleClientChange = this.handleClientChange.bind(this);
@@ -48,17 +46,12 @@ class NewProjectForm extends Component {
         })
         .then((dataResult) => this.setState({id: dataResult.data._id}))
         .then(this.props.toggleHidden());
-        // .then(() => this.setState({redirect: true}));
         event.preventDefault();
     }
 
 
   render() {
       
-    //   if (this.state.redirect === true) {
-    //     return <Redirect to={'/order/' + this.state.id} />
-    //   }
-
     return (
         <div className="newProject">
             <form autocomplete="off" onSubmit={this.handleSubmit}>
@@ -73,4 +66,4 @@ class NewProjectForm extends Component {
   }
 }
 
-export default NewProjectForm;
+export default NewProject;

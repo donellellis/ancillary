@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NewProjectForm from '../project/NewProjectForm.js'
+import NewProject from '../project/NewProject.js'
 import ShowProject from '../project/ShowProject.js'
 
 import './Dashboard.css'
@@ -29,7 +29,7 @@ class Dashboard extends Component {
                 <h1 className='dashboard-h1'>all projects</h1>
                 <button onClick={this.toggleHidden} className="far fa-plus-square"></button>
             </div>
-            {!this.state.isHidden && <NewProjectForm isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} />}
+            {!this.state.isHidden && <NewProject isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} />}
         </div>
         <div className="dashboard-projects">
           <ShowProject/>
