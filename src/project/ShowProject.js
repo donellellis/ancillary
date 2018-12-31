@@ -36,7 +36,7 @@ class ShowProject extends Component {
       let list = this.state.projectData.map((project, index) => {
           return (
             <div className='showProject' key={index}>
-                <img className="showProject-img" src={project.imageURL} alt="A Trip to the Moon"/>
+                <img className="showProject-img" src={project.imageURL} alt=""/>
                 <h2 className='showProject-h2'>{project.client}</h2>
                 <h1 className='showProject-h1'>{project.name}</h1>
           </div>

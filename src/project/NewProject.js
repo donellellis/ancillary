@@ -38,6 +38,9 @@ class NewProject extends Component {
         axios({
             method: 'post',
             url: backendBaseUrl + postEndpoint,
+            headers: {
+                Authorization: 'Bearer ' + localStorage.token
+            },
             data: {
                 name: this.state.name, 
                 client: this.state.client, 
@@ -59,6 +62,7 @@ class NewProject extends Component {
                 <input className="newProject-input" type="text" value={this.state.name} onChange={this.handleNameChange} placeholder="project name" />
                 <input className="newProject-input" type="text" value={this.state.client} onChange={this.handleClientChange} placeholder="client name" />
                 <input className="newProject-input" type="text" value={this.state.imageURL} onChange={this.handleImageURLChange} placeholder="project image" />
+                {/* add options to select placeholder image */}
                 <input className="home-button" type="submit" value="Create Project" />
             </form>
       </div>
