@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-import './ShowProject.css'
+import './IndexProject.css'
 
 const backendBaseUrl = 'http://localhost:4000'
 const postEndpoint = '/projects';
 
-class ShowProject extends Component {
+class IndexProject extends Component {
 
     constructor(props) {
         super(props);
@@ -35,19 +35,19 @@ class ShowProject extends Component {
   render () {
       let list = this.state.projectData.map((project, index) => {
           return (
-            <div className='showProject' key={index}>
-                <img className="showProject-img" src={project.imageURL} alt=""/>
-                <h2 className='showProject-h2'>{project.client}</h2>
-                <h1 className='showProject-h1'>{project.name}</h1>
+            <div className='indexProject' key={index}>
+                <img className="indexProject-img" src={project.imageURL} alt=""/>
+                <h2 className='indexProject-h2'>{project.client}</h2>
+                <h1 className='indexProject-h1'>{project.name}</h1>
           </div>
           )
       })
     return (
-      <div className="showProject-container">
+      <div className="indexProject-container">
           {list}
       </div>
     )
   }
 }
 
-export default ShowProject
+export default IndexProject

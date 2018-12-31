@@ -1,4 +1,4 @@
-.showProject {
+.indexProject {
     height: 275px;
     width: 275px;
     border: white 2px solid;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.showProject-h1 {
+.indexProject-h1 {
     font-size: 26px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -17,7 +17,7 @@
     text-transform: lowercase;
 }
 
-.showProject-h2 {
+.indexProject-h2 {
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -26,7 +26,7 @@
     text-transform: lowercase;
 }
 
-.showProject-img {
+.indexProject-img {
     object-fit: cover;
     height: 100px;
     width: 100px;
@@ -36,7 +36,7 @@
     margin-bottom: 20px;
 }
 
-.showProject-container {
+.indexProject-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
