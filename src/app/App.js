@@ -122,6 +122,7 @@ class App extends Component {
           />
           <Route exact path='/dashboard' component={ Dashboard } />
         </main>
+        <footer></footer>
       </div>
     );
   }

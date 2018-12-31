@@ -24,12 +24,14 @@ class Dashboard extends Component {
   render () {
     return (
       <div className='dashboard'>
-        <div className='dashboard-textbox'>
-            <div className="dashboard-nav">
-                <h1 className='dashboard-h1'>all projects</h1>
-                <button onClick={this.toggleHidden} className="far fa-plus-square"></button>
-            </div>
-            {!this.state.isHidden && <NewProject isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} />}
+        <div className='dashboard-fixedContainer'>
+          <div className='dashboard-textbox'>
+              <div className="dashboard-nav">
+                  <h1 className='dashboard-h1'>all projects</h1>
+                  <button onClick={this.toggleHidden} className="far fa-plus-square"></button>
+              </div>
+              {!this.state.isHidden && <NewProject isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} />}
+          </div>
         </div>
         <div className="dashboard-projects">
           <ShowProject/>
