@@ -1,4 +1,4 @@
-.showChairsProject {
+.chairs {
     height: 430px;
     width: 350px;
     border: white 2px solid;
@@ -9,7 +9,7 @@
 }
 
 
-.showChairsProject-h1 {
+.chairs-h1 {
     font-size: 26px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -18,7 +18,7 @@
     text-transform: lowercase;
 }
 
-.showChairsProject-h2 {
+.chairs-h2 {
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -27,7 +27,7 @@
     text-transform: lowercase;
 }
 
-.showChairsProject-h3 {
+.chairs-h3 {
     color: white;
     font-size: 14px;
     font-weight: 400;
@@ -35,7 +35,7 @@
     margin: 1px 0px 0px 10px;
 }
 
-.showChairsProject-h3-bold {
+.chairs-h3-bold {
     color: white;
     font-size: 16px;
     font-weight: 400;
@@ -45,7 +45,7 @@
     
 }
 
-.showChairsProject-img {
+.chairs-img {
     object-fit: scale-down;
     height: 275px;
     width: calc(100% - 4px);
@@ -55,7 +55,7 @@
     background-color: white;
 }
 
-.showChairsProject-container {
+.chairs-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;

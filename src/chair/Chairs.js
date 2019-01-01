@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-class Chair extends Component {
+const backendBaseUrl = 'http://localhost:4000'
+const postEndpoint = '/chairs';
+
+class Chairs extends Component {
     constructor(props) {
         super(props);
         this.state = {chairData: []};
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:4000/chair`)
+        axios.get(backendBaseUrl + postEndpoint)
           .then(res => {
             const chairData = res.data;
             this.setState({ chairData })
@@ -22,9 +25,9 @@ class Chair extends Component {
     render() {
         let list = this.state.chairData.map((chair, index) => {
             return(
-                <div className="name" key={index}>
+                <div className="chairs" key={index}>
                     <h2>
-                        {chair.modelName}
+                        {chair.chairName}
                     </h2>
                     <h3>
                         {chair.manufacturer}
@@ -40,4 +43,4 @@ class Chair extends Component {
     }
 }
 
-export default Chair;
+export default Chairs;

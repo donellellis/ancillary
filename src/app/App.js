@@ -12,6 +12,7 @@ import LogInForm from '../logInForm/LogInForm'
 import LogOut from '../logOut/LogOut'
 import Dashboard from '../dashboard/Dashboard.js'
 import ShowProject from '../project/showProject/ShowProject.js'
+import Chairs from '../chair/Chairs.js'
 
 class App extends Component {
   constructor() {
@@ -123,6 +124,7 @@ class App extends Component {
           />
           <Route exact path='/projects' component={ Dashboard } />
           <Route exact path='/projects/:id' component={ ShowProject }/>
+          <Route exact path='/chairs' component={ Chairs}/>
         </main>
         <footer></footer>
       </div>

@@ -17,7 +17,17 @@ class ShowProject extends Component {
             client: "",
             imageURL: "",
             chairIds: []
-        }};
+        },
+        isHidden: true
+    }
+    this.toggleHidden = this.toggleHidden.bind(this)
+    }
+
+    toggleHidden(event) {
+        event.preventDefault()
+        this.setState({
+            isHidden: !this.state.isHidden
+        })
     }
 
     componentDidMount(){
@@ -59,10 +69,10 @@ class ShowProject extends Component {
                             <Link className="fas fa-arrow-left showProjects-navButton" to={'/projects'}></Link>
 
                             {/* shows all chairs in project */}
-                            <button class="fas fa-chair showProjects-navButton"></button>
+                            <button onClick={this.toggleHidden} class="fas fa-chair showProjects-navButton"></button>
 
                             {/* shows all available chairs in database */}
-                            <button class="fas fa-th showProjects-navButton"></button>
+                            <button onClick={this.toggleHidden} class="fas fa-th showProjects-navButton"></button>
                             {/* {!this.state.isHidden && <Chair isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} />} */}
                         </div>
                         <h2 className='showProjects-h2'>{project.client}</h2>
@@ -70,7 +80,7 @@ class ShowProject extends Component {
                     </div>
                 </div>
                 <div className="showProjects-projects">
-                <ShowChairsProject projectPath={this.props.match.params.id}/>
+                {this.state.isHidden && <ShowChairsProject isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} projectPath={this.props.match.params.id}/>}
                 </div>
         </div>
     );

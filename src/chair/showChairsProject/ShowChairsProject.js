@@ -11,7 +11,9 @@ class ShowChairsProject extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {chairData: []};
+        this.state = {
+            chairData: []
+        }
     }
 
     
@@ -60,5 +62,7 @@ class ShowChairsProject extends Component {
     )
   }
 }
+
+
 
 export default ShowChairsProject
