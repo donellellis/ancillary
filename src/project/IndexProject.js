@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import './IndexProject.css'
 
@@ -31,15 +32,15 @@ class IndexProject extends Component {
           })
     }
 
-
   render () {
       let list = this.state.projectData.map((project, index) => {
           return (
             <div className='indexProject' key={index}>
+                <Link className="indexProject-link" to={'/projects/'+ project._id}></Link>
                 <img className="indexProject-img" src={project.imageURL} alt=""/>
                 <h2 className='indexProject-h2'>{project.client}</h2>
                 <h1 className='indexProject-h1'>{project.name}</h1>
-          </div>
+            </div>
           )
       })
     return (

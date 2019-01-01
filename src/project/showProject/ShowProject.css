@@ -1,0 +1,13 @@
+.showProjects {
+    background-image: linear-gradient(to right, rgb(250, 222, 95), rgb(252, 206, 4));
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    top: 40px;
+    right: 0px;
+    left: 0px;
+    bottom: 20px;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+    height: calc(100vh - 60px);
+}

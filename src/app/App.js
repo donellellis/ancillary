@@ -11,6 +11,7 @@ import SignUpForm from '../signUpForm/SignUpForm'
 import LogInForm from '../logInForm/LogInForm'
 import LogOut from '../logOut/LogOut'
 import Dashboard from '../dashboard/Dashboard.js'
+import ShowProject from '../project/showProject/ShowProject.js'
 
 class App extends Component {
   constructor() {
@@ -66,7 +67,7 @@ class App extends Component {
     .then(response => {
       localStorage.token = response.data.token
       this.setState({ isLoggedIn: true })
-      window.location.assign('/dashboard')
+      window.location.assign('/projects')
     })
     .catch(err => console.log(err))
   }
@@ -81,7 +82,7 @@ class App extends Component {
     .then(response => {
       localStorage.token = response.data.token
       this.setState({isLoggedIn: true})
-      window.location.assign('/dashboard')
+      window.location.assign('/projects')
     })
     .catch(err => console.log(err))
   }
@@ -120,16 +121,14 @@ class App extends Component {
               )
             }}
           />
-          <Route exact path='/dashboard' component={ Dashboard } />
+          <Route exact path='/projects' component={ Dashboard } />
+          <Route exact path='/projects/:id' component={ ShowProject }/>
         </main>
         <footer></footer>
       </div>
     );
   }
 }
-
-
-
 
 
 export default App;

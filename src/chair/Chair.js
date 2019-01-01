@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-class Furniture extends Component {
+class Chair extends Component {
     constructor(props) {
         super(props);
-        this.state = {furnitureData: []};
+        this.state = {chairData: []};
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:4000/api/furniture`)
+        axios.get(`http://localhost:4000/chair`)
           .then(res => {
-            const furnitureData = res.data;
-            this.setState({ furnitureData })
+            const chairData = res.data;
+            this.setState({ chairData })
           })
           .catch((err) => {
               console.log(err)
@@ -20,14 +20,14 @@ class Furniture extends Component {
     }
 
     render() {
-        let list = this.state.furnitureData.map((furniture, index) => {
+        let list = this.state.chairData.map((chair, index) => {
             return(
                 <div className="name" key={index}>
                     <h2>
-                        {furniture.modelName}
+                        {chair.modelName}
                     </h2>
                     <h3>
-                        {furniture.manufacturer}
+                        {chair.manufacturer}
                     </h3>
                 </div>
             )
@@ -40,4 +40,4 @@ class Furniture extends Component {
     }
 }
 
-export default Furniture;
+export default Chair;
