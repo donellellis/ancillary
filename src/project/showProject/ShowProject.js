@@ -3,7 +3,8 @@ import './ShowProject.css'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import ShowChairsProject from '../../chair/showChairsProject/ShowChairsProject.js'
+import ShowChairsProject from '../../chair/showChairsProject/ShowChairsProject.js';
+import Chairs from '../../chair/Chairs.js';
 
 const backendBaseUrl = 'http://localhost:4000'
 const postEndpoint = '/projects/singleProject';
@@ -81,6 +82,7 @@ class ShowProject extends Component {
                 </div>
                 <div className="showProjects-projects">
                 {this.state.isHidden && <ShowChairsProject isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} projectPath={this.props.match.params.id}/>}
+                {!this.state.isHidden && <Chairs isHidden={this.state.isHidden} toggleHidden={this.toggleHidden}/>}
                 </div>
         </div>
     );
