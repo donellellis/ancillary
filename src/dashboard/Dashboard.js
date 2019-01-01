@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NewProject from '../project/newProject/NewProject.js'
-import IndexProject from '../project/IndexProject.js'
+import Project from '../project/Project.js'
 
 import './Dashboard.css'
 
@@ -34,7 +34,7 @@ class Dashboard extends Component {
           </div>
         </div>
         <div className="dashboard-projects">
-          <IndexProject/>
+          <Project/>
         </div>
       </div>
     )
