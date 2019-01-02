@@ -64,7 +64,6 @@ class ShowProject extends Component {
                 <div className='showProjects-fixedContainer'>
                     <div className='showProjects-textbox'>
                         <div className="showProjects-nav">
-                            {/* <button onClick={this.toggleHidden} className="far fa-plus-square"></button> */}
 
                             {/* navigates back to dashboard */}
                             <Link className="fas fa-arrow-left showProjects-navButton" to={'/projects'}></Link>
@@ -74,7 +73,7 @@ class ShowProject extends Component {
 
                             {/* shows all available chairs in database */}
                             <button onClick={this.toggleHidden} class="fas fa-th showProjects-navButton"></button>
-                            {/* {!this.state.isHidden && <Chair isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} />} */}
+
                         </div>
                         <h2 className='showProjects-h2'>{project.client}</h2>
                         <h1 className='showProjects-h1'>{project.name}</h1>

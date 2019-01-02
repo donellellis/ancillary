@@ -1,11 +1,18 @@
 .chairs {
-    height: 430px;
-    width: 350px;
+    height: 315px;
+    width: 315px;
     border: white 2px solid;
     margin: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.chairs-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 7px;
 }
 
 
@@ -22,17 +29,9 @@
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px 0px 10px;
     color: white;
     text-transform: lowercase;
-}
-
-.chairs-h3 {
-    color: white;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    margin: 1px 0px 0px 10px;
 }
 
 .chairs-h3-bold {
@@ -40,14 +39,13 @@
     font-size: 16px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    margin: 7px 0px 0px 10px;
+    margin: 0px 10px 0px 0px;
     font-weight: 500;
-    
 }
 
 .chairs-img {
     object-fit: scale-down;
-    height: 275px;
+    height: 215px;
     width: calc(100% - 4px);
     align-self: flex-start;
     border: 3px white solid;
@@ -62,4 +60,6 @@
     width: 100%;
     align-items: center;
 }
+
+/* style checkboxes differently */
 

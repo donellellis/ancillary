@@ -50,7 +50,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 800px;
+    width: 748px;
     overflow-y:scroll;
     margin: 20px;
 }
