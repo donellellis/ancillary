@@ -65,7 +65,7 @@ class App extends Component {
   handleSignUp(e) {
     e.preventDefault()
     console.log('in sign up')
-    axios.post( backendBaseUrl + '/users/signup', {
+    axios.post( backendBaseUrl + '/users/signup/', {
       email: this.state.email,
       password: this.state.password
     })
