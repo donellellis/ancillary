@@ -71,7 +71,7 @@ class App extends Component {
     .then(response => {
       localStorage.token = response.data.token
       this.setState({ isLoggedIn: true })
-      window.location.assign('/projects')
+      // window.location.assign('/projects')
     })
     .catch(err => console.log(err))
   }
@@ -86,7 +86,7 @@ class App extends Component {
     .then(response => {
       localStorage.token = response.data.token
       this.setState({isLoggedIn: true})
-      window.location.assign('/projects')
+      // window.location.assign('/projects')
     })
     .catch(err => console.log(err))
   }
