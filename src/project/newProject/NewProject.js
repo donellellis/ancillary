@@ -58,7 +58,7 @@ class NewProject extends Component {
       
     return (
         <div className="newProject">
-            <form autocomplete="off" onSubmit={this.handleSubmit}>
+            <form autoComplete="off" onSubmit={this.handleSubmit}>
                 <h3 className="newProject-h3">New Project</h3>
                 <input className="newProject-input" type="text" value={this.state.name} onChange={this.handleNameChange} placeholder="project name" />
                 <input className="newProject-input" type="text" value={this.state.client} onChange={this.handleClientChange} placeholder="client name" />

@@ -10,7 +10,7 @@ class SignUpForm extends Component {
           <h1 className="home-h1">ancillary</h1>
           <h2 className="home-h2">a furniture specification and budgeting tool for interior designers</h2>
           <h3 className="signUp-h3">Sign Up</h3>
-          <form autocomplete="off">
+          <form autoComplete="off">
             <div>
               <input className="signUp-input" type='text' name='email' placeholder="email" onChange={this.props.handleInput} />
             </div>
