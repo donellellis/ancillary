@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import './Project.css'
 import DeleteProject from './deleteProject/DeleteProject.js';
 
-const backendBaseUrl = 'http://localhost:4000'
+// defines environmental variables
+const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
 const postEndpoint = '/projects';
 
 class Project extends Component {

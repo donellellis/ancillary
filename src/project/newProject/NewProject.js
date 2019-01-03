@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './NewProject.css'
 import axios from 'axios';
 
-const backendBaseUrl = 'http://localhost:4000'
+// defines environmental variables
+const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
 const postEndpoint = '/projects';
 
 class NewProject extends Component {
@@ -62,7 +63,6 @@ class NewProject extends Component {
                 <input className="newProject-input" type="text" value={this.state.name} onChange={this.handleNameChange} placeholder="project name" />
                 <input className="newProject-input" type="text" value={this.state.client} onChange={this.handleClientChange} placeholder="client name" />
                 <input className="newProject-input" type="text" value={this.state.imageURL} onChange={this.handleImageURLChange} placeholder="project image" />
-                {/* add options to select placeholder image */}
                 <input className="home-button" type="submit" value="Create Project" />
             </form>
       </div>

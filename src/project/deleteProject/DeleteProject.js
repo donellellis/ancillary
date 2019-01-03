@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import './DeleteProject.css'
 
-
-const backendBaseUrl = 'http://localhost:4000'
+// defines environmental variables
+const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
 const deleteEndpoint = '/projects/deleteProject';
 
 class DeleteProject extends Component {

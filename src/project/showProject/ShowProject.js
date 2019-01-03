@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 import ShowChairsProject from '../../chair/showChairsProject/ShowChairsProject.js';
 import Chairs from '../../chair/Chairs.js';
 
-const backendBaseUrl = 'http://localhost:4000'
+// defines environmental variables
+const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
 const postEndpoint = '/projects/singleProject';
 
 class ShowProject extends Component {
