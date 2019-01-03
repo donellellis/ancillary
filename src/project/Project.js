@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import './Project.css'
+import DeleteProject from './deleteProject/DeleteProject.js';
 
 const backendBaseUrl = 'http://localhost:4000'
 const postEndpoint = '/projects';
@@ -13,7 +14,7 @@ class Project extends Component {
         super(props);
         this.state = {projectData: []};
     }
-
+    
     componentDidMount() {
         axios.get(backendBaseUrl + postEndpoint, {
             headers: {
@@ -32,6 +33,25 @@ class Project extends Component {
           })
     }
 
+    componentDidUpdate() {
+        axios.get(backendBaseUrl + postEndpoint, {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.token
+            }
+        })
+          .then((res) => {
+            const projectData = res.data;
+            console.log(projectData)
+            this.setState({
+                projectData
+            })
+          })
+          .catch((err) => {
+              console.log(err)
+        })
+    }
+
+
   render () {
       let list = this.state.projectData.map((project, index) => {
           return (
@@ -40,7 +60,8 @@ class Project extends Component {
                 <img className="project-img" src={project.imageURL} alt=""/>
                 <h2 className='project-h2'>{project.client}</h2>
                 <h1 className='project-h1'>{project.name}</h1>
-            </div>
+                <DeleteProject projectid={project._id}/>
+           </div>
           )
       })
     return (

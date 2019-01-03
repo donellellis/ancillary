@@ -69,10 +69,10 @@ class ShowProject extends Component {
                             <Link className="fas fa-arrow-left showProjects-navButton" to={'/projects'}></Link>
 
                             {/* shows all chairs in project */}
-                            <button onClick={this.toggleHidden} class="fas fa-chair showProjects-navButton"></button>
+                            <button onClick={this.toggleHidden} className="fas fa-chair showProjects-navButton"></button>
 
                             {/* shows all available chairs in database */}
-                            <button onClick={this.toggleHidden} class="fas fa-th showProjects-navButton"></button>
+                            <button onClick={this.toggleHidden} className="fas fa-th showProjects-navButton"></button>
 
                         </div>
                         <h2 className='showProjects-h2'>{project.client}</h2>
@@ -81,7 +81,7 @@ class ShowProject extends Component {
                 </div>
                 <div className="showProjects-projects">
                 {this.state.isHidden && <ShowChairsProject isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} projectPath={this.props.match.params.id}/>}
-                {!this.state.isHidden && <Chairs isHidden={this.state.isHidden} toggleHidden={this.toggleHidden}/>}
+                {!this.state.isHidden && <Chairs isHidden={this.state.isHidden} toggleHidden={this.toggleHidden} projectPath={this.props.match.params.id}/>}
                 </div>
         </div>
     );

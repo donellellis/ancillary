@@ -61,5 +61,20 @@
     align-items: center;
 }
 
+.chairs-button {
+    background-color: transparent;
+    border: 2px black solid;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    left: 40px;
+    bottom: 200px;
+}
+
 /* style checkboxes differently */
 
