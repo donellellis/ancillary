@@ -9,14 +9,6 @@ const deleteEndpoint = '/projects/deleteProject/';
 
 class DeleteProject extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-        }
-
-        this.handleDeleteRequest = this.handleDeleteRequest.bind(this);
-    }
-
     // deletes project from database
     handleDeleteRequest = event => {
         event.preventDefault();
@@ -31,7 +23,7 @@ class DeleteProject extends Component {
             }
         })
         .then(res => {
-            console.log(res);
+            window.location.reload();
         })
     }
 
