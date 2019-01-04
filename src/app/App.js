@@ -72,7 +72,6 @@ class App extends Component {
     .then(response => {
       localStorage.token = response.data.token
       this.setState({ isLoggedIn: true })
-      // window.location.assign('/projects')
     })
     .catch(err => console.log(err))
   }
@@ -87,7 +86,6 @@ class App extends Component {
     .then(response => {
       localStorage.token = response.data.token
       this.setState({isLoggedIn: true})
-      // window.location.assign('/projects')
     })
     .catch(err => console.log(err))
   }
@@ -119,6 +117,7 @@ class App extends Component {
               )
             }}
           />
+
           <Route exact path='/login'
             render={(props) => {
               return (
@@ -126,6 +125,8 @@ class App extends Component {
               )
             }}
           />
+
+
           <Route exact path='/projects' component={ Dashboard } />
           <Route exact path='/projects/:id' component={ ShowProject }/>
           <Route exact path='/chairs' component={ Chairs}/>
@@ -135,6 +136,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;

@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import './LogOut.css'
 
 class LogOut extends Component {
   render () {
+
+    if (!this.props.isLoggedIn){
+      return <Redirect to={'/'}/>;
+    }
+
     return (
       <div className="home">
         <div className="home-textbox">

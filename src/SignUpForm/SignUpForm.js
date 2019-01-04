@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import './SignUpForm.css'
 
 class SignUpForm extends Component {
   render () {
+
+    if (this.props.isLoggedIn){
+      return <Redirect to={'/projects'}/>;
+    }
+
     return (
       <div className="home">
         <div className="home-textbox">

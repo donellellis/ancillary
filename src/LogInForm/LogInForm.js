@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import './LogInForm.css'
 
 class LogInForm extends Component {
+
   render () {
-    return (
-      <div className="home">
+
+    if (this.props.isLoggedIn){
+      return <Redirect to={'/projects'}/>;
+    }
+    
+      return (
+        <div className="home">
         <div className="home-textbox">
           <h1 className="home-h1">ancillary</h1>
           <h2 className="home-h2">a furniture specification and budgeting tool for interior designers</h2>
@@ -22,8 +29,9 @@ class LogInForm extends Component {
         </div>
         <img className="home-img" src="https://i.imgur.com/nL4okEY.png" alt="Wishbone Chair by Carl Hansen"/>
       </div>
-    )
+        )
   }
 }
 
 export default LogInForm
+
