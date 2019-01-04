@@ -34,25 +34,6 @@ class Project extends Component {
           })
     }
 
-    componentDidUpdate() {
-        axios.get(backendBaseUrl + postEndpoint, {
-            headers: {
-                Authorization: 'Bearer ' + localStorage.token
-            }
-        })
-          .then((res) => {
-            const projectData = res.data;
-            console.log(projectData)
-            this.setState({
-                projectData
-            })
-          })
-          .catch((err) => {
-              console.log(err)
-        })
-    }
-
-
   render () {
       let list = this.state.projectData.map((project, index) => {
           return (

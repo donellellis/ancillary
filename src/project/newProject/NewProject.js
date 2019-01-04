@@ -48,12 +48,11 @@ class NewProject extends Component {
                 imageURL: this.state.imageURL 
             }
         })
-        .then((dataResult) => this.setState({
-            id: dataResult.data._id
-        }))
+        .then((dataResult) => this.setState({id: dataResult.data._id}))
         .then(this.props.toggleHidden());
         event.preventDefault();
     }
+
 
 
   render() {
