@@ -4,7 +4,7 @@ Ancillary is a furniture specification and budgeting tool for professional inter
 
 ### A Digital Transformation
 
->Ancillary aims to improve an existing industry process. Currently, the initial workflow of selecting furniture and creating a specification book is time intensive and results in a large-scale duplication of efffort. A designer spends hours scrolling through furniture manufacturer's website and manually finding and documenting the specifications, saving product images, and asking reps for current list prices. By creating a database of commercially-available furniture, Ancillary saves designers time and money.
+>Ancillary aims to improve an existing industry process. Currently, the initial workflow of selecting furniture and creating a specification book is time intensive and results in a large-scale duplication of efffort. A designer spends hours scrolling through furniture manufacturer websites and manually finding and documenting the specifications, saving product images, and asking reps for current list prices. By creating a database of commercially-available furniture, Ancillary saves designers time and money.
 
 ## Deployed
 http://ancillary.surge.sh/
