@@ -5,7 +5,7 @@ import './DeleteProject.css'
 
 // defines environmental variables
 const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
-const deleteEndpoint = '/projects/deleteProject';
+const deleteEndpoint = '/projects/deleteProject/';
 
 class DeleteProject extends Component {
 

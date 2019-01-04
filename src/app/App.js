@@ -79,7 +79,7 @@ class App extends Component {
 
   handleLogIn(e) {
     e.preventDefault()
-    axios.post(backendBaseUrl + '/users/login', {
+    axios.post(backendBaseUrl + '/users/login/', {
       email: this.state.email,
       password: this.state.password
     })
@@ -103,14 +103,14 @@ class App extends Component {
               )
             }}/>
    
-          <Route exact path='/signup'
+          <Route exact path='/signup/'
               render={(props) => {
                 return (
                   <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
                 )
               }}
             />
-          <Route exact path='/logout'
+          <Route exact path='/logout/'
             render={(props) => {
               return (
                 <LogOut isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
@@ -118,7 +118,7 @@ class App extends Component {
             }}
           />
 
-          <Route exact path='/login'
+          <Route exact path='/login/'
             render={(props) => {
               return (
                 <LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
@@ -127,9 +127,9 @@ class App extends Component {
           />
 
 
-          <Route exact path='/projects' component={ Dashboard } />
-          <Route exact path='/projects/:id' component={ ShowProject }/>
-          <Route exact path='/chairs' component={ Chairs}/>
+          <Route exact path='/projects/' component={ Dashboard } />
+          <Route exact path='/projects/:id/' component={ ShowProject }/>
+          <Route exact path='/chairs/' component={ Chairs}/>
         </main>
         <footer></footer>
       </div>

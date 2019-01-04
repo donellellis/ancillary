@@ -57,7 +57,7 @@ class Project extends Component {
       let list = this.state.projectData.map((project, index) => {
           return (
             <div className='project' key={index}>
-                <Link className="project-link" to={'/projects/'+ project._id}></Link>
+                <Link className="project-link" to={'/projects/'+ project._id + '/'}></Link>
                 <img className="project-img" src={project.imageURL} alt=""/>
                 <h2 className='project-h2'>{project.client}</h2>
                 <h1 className='project-h1'>{project.name}</h1>

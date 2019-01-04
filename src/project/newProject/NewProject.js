@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // defines environmental variables
 const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
-const postEndpoint = '/projects';
+const postEndpoint = '/projects/';
 
 class NewProject extends Component {
     constructor(props){
@@ -48,7 +48,9 @@ class NewProject extends Component {
                 imageURL: this.state.imageURL 
             }
         })
-        .then((dataResult) => this.setState({id: dataResult.data._id}))
+        .then((dataResult) => this.setState({
+            id: dataResult.data._id
+        }))
         .then(this.props.toggleHidden());
         event.preventDefault();
     }
