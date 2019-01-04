@@ -14,8 +14,7 @@ class Dashboard extends Component {
     this.toggleHidden = this.toggleHidden.bind(this)
   }
 
-  toggleHidden(event) {
-    event.preventDefault()
+  toggleHidden() {
     this.setState({
     isHidden: !this.state.isHidden
     })

@@ -48,8 +48,9 @@ class NewProject extends Component {
             }
         })
         .then((dataResult) => this.setState({id: dataResult.data._id}))
-        .then(this.props.toggleHidden());
+        // .then(this.props.toggleHidden());
         event.preventDefault();
+        window.location.reload()
     }
 
 
