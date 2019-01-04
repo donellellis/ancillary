@@ -34,7 +34,7 @@ class NewProject extends Component {
     }
 
     handleSubmit(event) {
-
+        event.preventDefault();
         // Sends a POST request
         axios({
             method: 'post',
@@ -50,7 +50,6 @@ class NewProject extends Component {
         })
         .then((dataResult) => this.setState({id: dataResult.data._id}))
         .then(this.props.toggleHidden());
-        event.preventDefault();
     }
 
 

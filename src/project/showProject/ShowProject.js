@@ -8,7 +8,7 @@ import Chairs from '../../chair/Chairs.js';
 
 // defines environmental variables
 const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
-const postEndpoint = '/projects/singleProject';
+const postEndpoint = '/projects/singleProject/';
 
 class ShowProject extends Component {
 

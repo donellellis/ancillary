@@ -4,7 +4,7 @@ import axios from 'axios';
 import './ShowChairsProject.css'
 
 const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
-const postEndpoint = '/chairs/projectChairs';
+const postEndpoint = '/chairs/projectChairs/';
 
 class ShowChairsProject extends Component {
 

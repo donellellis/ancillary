@@ -8,7 +8,7 @@ class LogInForm extends Component {
   render () {
 
     if (this.props.isLoggedIn){
-      return <Redirect to={'/projects'}/>;
+      return <Redirect to={'/projects/'}/>;
     }
     
       return (

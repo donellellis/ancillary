@@ -7,7 +7,7 @@ import DeleteProject from './deleteProject/DeleteProject.js';
 
 // defines environmental variables
 const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
-const postEndpoint = '/projects';
+const postEndpoint = '/projects/';
 
 class Project extends Component {
 

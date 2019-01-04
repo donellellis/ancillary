@@ -3,10 +3,9 @@ import axios from 'axios';
 
 import './Chairs.css'
 
-
-const backendBaseUrl = 'http://localhost:4000'
-const postEndpoint = '/chairs';
-const putEndpoint = '/chairs/updateProjectChairs';
+const backendBaseUrl = (process.env.NODE_ENV === "development") ? process.env.REACT_APP_DEVELOPMENT : process.env.REACT_APP_PRODUCTION
+const postEndpoint = '/chairs/';
+const putEndpoint = '/chairs/updateProjectChairs/';
 
 class Chairs extends Component {
     constructor(props) {
@@ -41,15 +40,8 @@ class Chairs extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        // if object in this.setState.isUsed is true, update in this project chairIDs
         console.log('is used', this.state.isUsed)
-        // axios.put(backendBaseUrl + putEndpoint)
-        //     .then(function (response) {
-        //         // do something...
-        //     }.bind(this))
-        //     .catch(function (error) {
-        //         console.log(error)
-        //     });
+      
         axios({
             method: 'put',
             url: backendBaseUrl + putEndpoint,
@@ -67,7 +59,7 @@ class Chairs extends Component {
             this.setState({
                 projectData
             })
-        // }) may need to add bind here
+        //may need to add bind here
         .catch(function (error) {
             console.log(error)
         })
@@ -116,12 +108,6 @@ class Chairs extends Component {
 }
 
 export default Chairs;
-
-
-// find project in database
-// find list of chairIds in project
-//if the chair exists in the project, show with a checkbox in Chairs
-
 
 
 
