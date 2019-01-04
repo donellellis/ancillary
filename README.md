@@ -30,7 +30,7 @@ $ npm start
 
 ### Back End
 
-You can find the back end of this app [here](https://github.com/donellellis/ancillary-api) .
+You can find the back end of this app and installation instructions [here](https://github.com/donellellis/ancillary-api) .
 
 ## Built With
 
