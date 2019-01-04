@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ancillary
 
-## Available Scripts
+Ancillary is a furniture specification and budgeting tool for professional interior designers. The application allows designers to create and manage multiple projects from one dashboard. Ancillary includes a databse of commercially-available furniture that a designer can pull from and add to a project. Furniture selections are stored in a project and display information neeeded for specification, including the manufacturer, model name, model number, dimensions, and list price.
 
-In the project directory, you can run:
+###A Digital Transformation
 
-### `npm start`
+>Ancillary aims to improve an existing industry process. Currently, the initial workflow of selecting furniture and creating a specification book is time intensive and results in a large-scale duplication of efffort. A designer spends hours scrolling through furniture manufacturer's website and manually finding and documenting the specifications, saving product images, and asking reps for current list prices. By creating a database of commercially-available furniture, Ancillary saves designers time and money.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Deployed
+http://ancillary.surge.sh/
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+For deployment and testing purposes, clone this repository on GitHub and change into the directory.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Ancillary](https://i.imgur.com/o01n8mg.jpg?2)
 
-### `npm run build`
+## Installing
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Front End
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+To install all necessary dependencies, run
+```
+$ npm install
+```
+To launch the app locally, run
+```
+$ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Back End
 
-### `npm run eject`
+You can find the back end of this app [here](https://github.com/donellellis/ancillary-api) .
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Built With
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* MongoDB
+* Express
+* React
+* Node
+* Mongoose
+* Passport-jwt
+* CSS
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Contributions not accepted at this time.
 
-## Learn More
+## Future Features
+* Ancillary will be expanded to include a budgeting feature that will calculate the current furniture budget based on the project square footage and list price and quantities of furniture specified. The budget will be included for each project on the dashboard so a designer can quickly and easily track the budget.
+* Filters will be added to the furniture databse show page so that a designer can quickly select an item based on desired price range or other properties.
+* Currently the furniture database is seeded, but a future feature will use apis from major furniture manufacturers.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **Donell Ellis** https://github.com/donellellis
