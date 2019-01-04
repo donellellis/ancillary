@@ -32,7 +32,6 @@ class DeleteProject extends Component {
         })
         .then(res => {
             console.log(res);
-            console.log(res.data);
         })
     }
 

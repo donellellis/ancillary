@@ -34,6 +34,7 @@ class Project extends Component {
           })
     }
 
+
   render () {
       let list = this.state.projectData.map((project, index) => {
           return (
